@@ -20,6 +20,7 @@
 
          source.onmessage = function(event) {
              console.log("SSE onmessage: " + event.data);
+             document.querySelector("message").insertAdjacentHTML('beforeend','<p>'+event.data+'</p>')
          }
          source.onerror = function(event) {
              console.log("SSE onerror " + event);
@@ -29,6 +30,6 @@
     </script>
 </head>
 <body>
-
+<message></message>
 </body>
 </html>
